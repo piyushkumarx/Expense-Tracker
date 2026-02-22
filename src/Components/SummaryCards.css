@@ -1,0 +1,102 @@
+
+.summary-box{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 30px;
+ 
+}
+
+.summary-card{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #edf2f7;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.050);
+  
+}
+
+.sub-text{
+  font-size: 0.9rem;
+  translate: 0px 2px;
+}
+
+.slash{
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.budget-card-amt{
+  display: flex;
+  align-items: center;
+}
+
+.label-row{
+  font-size: 13px;
+  color: #718096;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.indicator{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.name-icon{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.icon-summary{
+  font-size: 20px;
+  
+}
+
+
+
+.amount-text {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+
+
+
+@media(max-width:1530px){
+
+  .summary-box{
+    
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  }
+
+}
+
+@media(max-width: 1000px){
+
+  .summary-card{
+    padding: 25px 16px;
+  }
+
+  .summary-box{
+    gap: 12px;
+  }
+
+}
+
+@media(max-width: 620px){
+.summary-box{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+}

@@ -1,0 +1,157 @@
+.card {
+  font-family: system-ui, Cochin, Georgia;
+  background: white;
+  padding: 25px 18px;
+  margin: 0px 20px;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 450px;
+
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: #1a1a1a;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.field label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.add-exp-input,
+.add-exp-select {
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  font-size: 14px;
+  outline: none;
+  color: #555;
+}
+
+.add-exp-input:focus {
+  border: 2px solid #2b59ffd1;
+}
+
+
+.err {
+  font-family: system-ui, Cochin, Georgia;
+  background: white;
+  padding: 25px 18px;
+  margin: 0px 20px;
+
+
+  border-radius: 15px;
+  /* border: 1px solid red; */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 450px;
+
+}
+
+
+.err input,
+.err select {
+  border: 1.7px solid red;
+}
+
+
+.err input:focus {
+  border: 1px solid rgba(158, 55, 55, 0.521);
+}
+
+
+.last-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-name-icon {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  /* border: 1px solid black; */
+
+
+}
+
+.icon-cross {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: rgba(255, 0, 0, 0.759);
+}
+
+
+.err-p {
+  /* text-align: center; */
+  color: red;
+  font-weight: 500;
+}
+
+.btn {
+  background-color: #2b59ffd1;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-self: self-end;
+  margin-left: auto;
+
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+}
+
+
+.cart-icon {
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.cart {
+  margin-top: 6px;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.851);
+}

@@ -1,0 +1,196 @@
+.table-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  overflow-x: auto;
+
+  box-shadow: 1px -5px 8px rgba(0, 0, 0, 0.065);
+  margin-top: 10px;
+  
+}
+
+.main-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+
+  text-align: left;
+  background-color: transparent;
+}
+
+
+.main-table th {
+  background-color: #f9fafb;
+  padding: 14px 20px;
+  font-size: 11px;
+
+  font-weight: 700;
+
+
+  color: #6b7280;
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #f3f4f6;
+
+}
+
+
+.main-table td {
+  padding: 16px 20px;
+  font-size: 15px;
+
+  color: #374151;
+
+  border-bottom: 1px solid #f9fafb;
+}
+
+.main-table tr:hover {
+  background-color: #fcfcfc;
+
+}
+
+
+.title-cell {
+  font-weight: 500;
+  color: #111827;
+}
+
+.date-cell {
+
+  color: #6b7280;
+}
+
+.amount-cell {
+  font-weight: 700;
+  color: #111827;
+
+}
+
+.active-amount-cell {
+  font-weight: 700;
+  color: black;
+}
+
+.cat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+
+
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+
+}
+
+
+
+
+.trash-btn,
+.edit-btn {
+  background: none;
+  border: none;
+  color: #acafb3;
+  cursor: pointer;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.trash-btn:hover {
+  color: #ef4444;
+}
+
+.edit-btn:hover {
+  color: green;
+
+}
+
+.action-btn-div {
+  display: flex;
+
+  gap: 12px;
+}
+
+
+@media (max-width: 1050px) {
+
+
+  .table-card {
+
+    background-color: unset;
+
+    border: unset;
+
+    box-shadow: unset;
+
+  }
+
+  .main-table thead {
+    display: none;
+
+  }
+
+
+  .main-table tbody {
+    width: 100%;
+    display: block;
+
+
+  }
+
+
+
+  .main-table {
+    display: block;
+    width: 100%;
+    min-width: unset;
+
+  }
+
+  .main-table tr {
+    background: #ffffff;
+    margin-bottom: 16px;
+    padding: 12px;
+    border-radius: 10px;
+    display: block;
+    border: 1.5px solid rgba(0, 0, 0, 0.153);
+    width: 100%;
+
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.295);
+
+  }
+
+  .main-table td {
+    padding: 10px 12px;
+    text-align: right;
+    position: relative;
+    border-bottom: none;
+    display: block;
+    width: 100%;
+
+    border: 1px solid rgba(0, 0, 0, 0.021);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.020);
+
+  }
+
+  .main-table td::before {
+    content: attr(data-label);
+    position: absolute;
+
+    left: 12px;
+    font-weight: 600;
+
+    color: #6b7280;
+    text-align: left;
+
+  }
+
+  .action-btn-div {
+
+    justify-content: flex-end;
+
+  }
+
+}

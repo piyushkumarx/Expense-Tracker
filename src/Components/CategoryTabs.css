@@ -1,0 +1,118 @@
+.tabs-container {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.tab-item {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  font-size: 15px;
+  color: #718096;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+
+.tab-item:hover {
+  background: #f3f4f6;
+  transform: translateY(2px);
+}
+
+
+.active-tab {
+  background-color: #2b59ff !important;
+  color: white;
+  font-weight: 600;
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.thismonth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.thismonth h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.thismonth .amount {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2b59ff;
+}
+
+@media(max-width:1530px) {
+  .tabs-container {
+
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .tab-item {
+    padding: 7px 14px;
+    font-size: 14px;
+  }
+
+  .thismonth h2 {
+    font-size: 18px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  .tabs-container {
+    /* flex-wrap: nowrap; */
+    overflow-x: auto;
+    padding-bottom: 5px;
+
+  }
+
+  .tab-item {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .thismonth {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .thismonth h2 {
+    font-size: 16px;
+  }
+
+  .thismonth .amount {
+    font-size: 15px;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .tab-item {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
