@@ -12,75 +12,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function ContextProvider({ children }) {
-  const tableData = [
-    {
-      id: 839196,
-      title: "Grocery Shopping",
-      cat: "Food",
-      date: "2026-02-13",
-      price: 85.5,
-      icon: faUtensils,
-      color: "#f97316",
-    },
-    {
-      id: 746443,
-      title: "Uber Ride",
-      cat: "Transport",
-      date: "2026-02-12",
-      price: 24.0,
-      icon: faCarSide,
-      color: "#0ea5e9",
-    },
-    {
-      id: 831123,
-      title: "Coffee & Snacks",
-      cat: "Other",
-      date: "2026-02-11",
-      price: 98.5,
-      icon: faCreditCard,
-      color: "#64748b",
-    },
-    {
-      id: 181527,
-      title: "Netflix Subscription",
-      cat: "Entertainment",
-      date: "2026-02-10",
-      price: 15.99,
-      icon: faTv,
-      color: "#a855f7",
-    },
-    {
-      id: 182827,
-      title: "New Headphones",
-      cat: "Shopping",
-      date: "2026-02-09",
-      price: 149.99,
-      icon: faBagShopping,
-      color: "#ec4899",
-    },
-    {
-      id: 40829,
-      title: "Electricity Bill",
-      cat: "Recharge & Bills",
-      date: "2026-02-08",
-      price: 120.0,
-      icon: faReceipt,
-      color: "#eab308",
-    },
-    {
-      id: 730661,
-      title: "Doctor Visit",
-      cat: "Health",
-      date: "2026-02-07",
-      price: 60.0,
-      icon: faHeartPulse,
-      color: "#22c55e",
-    },
-  ];
 
   const [table, setTable] = useState(() => {
     const savedData = localStorage.getItem("expenses");
-    return savedData ? JSON.parse(savedData) : tableData;
+    return savedData ? JSON.parse(savedData) : [];
   });
 
   const [addExpCard, setAddExpCard] = useState(false);
@@ -89,13 +24,11 @@ function ContextProvider({ children }) {
 
   const [deleteBox, setDeleteBox] = useState(false);
 
-  const [total, setTotal] = useState(0);
 
-  const [entries, setEntries] = useState(0);
+
 
   const [filterName, setFilterName] = useState("All");
 
-  const [totalAmount, setTotalAmount] = useState(0);
 
   const [searchInput, setSearchInput] = useState("");
 
@@ -147,27 +80,23 @@ function ContextProvider({ children }) {
     setDeleteBox(false);
   }
 
-  useEffect(() => {
-    const totalAmount = table.reduce((sum, item) => {
-      return sum + Number(item.price);
-    }, 0);
+ 
 
-    setTotalAmount(totalAmount.toFixed(2));
-  }, [table]);
+ const filteredData = table.filter(
+  (item) => filterName === "All" || item.cat === filterName
+);
 
-  useEffect(() => {
-    const TotalAmt = table
-      .filter((item) => filterName === "All" || item.cat === filterName)
-      .reduce((sum, item) => {
-        return sum + Number(item.price);
-      }, 0);
+const total = filteredData.reduce(
+  (sum, item) => sum + Number(item.price),
+  0
+);
 
-    setTotal(TotalAmt.toFixed(2));
-    setEntries(
-      table.filter((item) => filterName === "All" || item.cat === filterName)
-        .length,
-    );
-  }, [table, filterName]);
+const entries = filteredData.length;
+
+const totalAmount = table.reduce(
+  (sum, item) => sum + Number(item.price),
+  0
+);
 
   const CheckThisMonth = () => {
     const currentMonth = new Date().getMonth();

@@ -22,10 +22,11 @@ export default function AddExp({ onAddClick, setTable, categoryMap }) {
 
   const [err, setErr] = useState(false);
 
-  const formattedAmount = Number(amt).toFixed(2);
+ const formattedAmount = parseFloat(amt);
 
   const look = categoryMap[cat];
 
+  
   const FunctionTable = () => {
     if (!title || !amt || !date || !cat) {
       setErr(true);

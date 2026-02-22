@@ -4,6 +4,8 @@ import "./ExpenseTable.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import ExpenseTracker from "./Context";
+import emptyImage from "../assets/image.png";
+
 
 const ExpenseTable = ({
   TableData,
@@ -13,6 +15,16 @@ const ExpenseTable = ({
   filterName,
 }) => {
   const { searchInput, startDate, endDate } = useContext(ExpenseTracker);
+
+  if (TableData.length === 0) {
+    return (
+      <div className="empty-state">
+        <img src={emptyImage} alt="empty" />
+        <p>No expenses yet. Start adding one.</p>
+        
+      </div> 
+    );
+  }
 
   return (
     <div className="table-card">

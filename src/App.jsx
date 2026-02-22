@@ -69,6 +69,7 @@ CheckData,
 
 ChartJS.defaults.maintainAspectRatio = false;
 ChartJS.defaults.responsive = true;
+
 const datax = CheckData();
 
 
