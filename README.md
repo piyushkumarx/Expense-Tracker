@@ -16,7 +16,7 @@ To make the experience more intuitive and engaging, I added two data visualizati
 `Vanilla CSS`
 `Chart JS`
 
-#### Deploy Link: https://expense-tracker-pied-beta-22.vercel.app/
+#### Deploy Link: https://expense-tracker-beige-six-96.vercel.app/
 
 
 #### Credits - Font Awesome 
